@@ -6,6 +6,7 @@ namespace Exercicio_Semana9.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class SemanaController : ControllerBase
     {
         private readonly SemanaContext semanaContext;
@@ -53,7 +54,7 @@ namespace Exercicio_Semana9.Controllers
         }
         [HttpDelete("DELETE")]
 
-        public ActionResult Delete(int id)
+        public ActionResult Delete([FromRoute]int id)
         {
             var Id = semanaContext.Semana.Find(id);
 
@@ -70,3 +71,6 @@ namespace Exercicio_Semana9.Controllers
 
     }
 }
+
+
+

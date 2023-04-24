@@ -11,9 +11,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-string connectionString = "Server= LUCIANONOTE-GV5QH64;Database=Semana;Trusted_Connection=True;TrustServerCertificate=True;";
+string connectionString = "Server=LUCIANONOTE\\SQLEXPRESS;database=Semana;Trusted_Connection=True;TrustServerCertificate=True;";
 
-builder.Services.AddDbContext<SemanaContext>(x => x.UseSqlServer(connectionString: null));
+builder.Services.AddDbContext<SemanaContext>(x => x.UseSqlServer(connectionString));
 
 builder.Services.AddDbContext<SemanaContext>();
 
